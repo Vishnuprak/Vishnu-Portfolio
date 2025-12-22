@@ -1,0 +1,1 @@
+let animal = console.log("dog")
