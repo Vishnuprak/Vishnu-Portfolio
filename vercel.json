@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/contact_process.php",
+      "destination": "/api/contact_process"
+    }
+  ]
+}

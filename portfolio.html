@@ -1,343 +1,352 @@
-<!doctype html>
-<html lang="en">
-
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link rel="icon" href="img/v.png" type="image/png">
-	<title>Projects</title>
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="css/magnific-popup.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<!-- main css -->
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="icon" href="img/v.png" type="image/png">
+    <title>Projects | Vishnu Prakash</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: {
+                            950: '#030712',
+                            900: '#0b0f19',
+                            800: '#1e293b',
+                            700: '#334155'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glowing-orb {
+            filter: blur(120px);
+            pointer-events: none;
+        }
+        .glass-panel {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
 </head>
+<body class="bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 min-h-screen selection:bg-indigo-500 selection:text-white relative overflow-x-hidden transition-colors duration-300">
 
-<body>
+    <!-- Glowing Background Orbs -->
+    <div class="absolute top-0 left-1/3 w-[500px] h-[500px] bg-indigo-600 rounded-full glowing-orb opacity-5 dark:opacity-12"></div>
+    <div class="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-violet-600 rounded-full glowing-orb opacity-5 dark:opacity-12"></div>
 
-	<!--================ Start Header Area =================-->
-	<header class="header_area">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html"><img class="logo" src="./img/Vishnu_Prakash_logo.png" alt=""></a>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav justify-content-end">
-							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-							<li class="nav-item"><a class="nav-link" href="services.html">Skills</a></li>
-							<li class="nav-item active"><a class="nav-link" href="portfolio.html">projects</a></li>
-							<!-- <li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-                                    <li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
-								</ul>
-							</li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Blog</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
-									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
-								</ul>
-							</li> -->
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<!--================ End Header Area =================-->
+    <!--================ Header Area =================-->
+    <header class="fixed top-0 left-0 w-full z-50 glass-nav bg-white/80 dark:bg-slate-950/75 border-b border-slate-200/50 dark:border-slate-800/50 transition-all duration-300">
+        <div class="container mx-auto px-4 md:px-8 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center gap-2">
+                <img class="h-10 md:h-12 w-auto" src="./img/Vishnu_Prakash_logo.png" alt="Vishnu Prakash Logo" onerror="this.src='https://placehold.co/180x50/0f172a/fff?text=Vishnu+Prakash'">
+            </a>
+            
+            <div class="flex items-center gap-4">
+                <nav id="nav-links" class="hidden md:flex items-center gap-8">
+                    <a class="nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors" href="index.html#home">Home</a>
+                    <a class="nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors" href="index.html#about">About</a>
+                    <a class="nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors" href="index.html#experience">Experience</a>
+                    <a class="nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors" href="index.html#skills">Skills</a>
+                    <a class="nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors" href="index.html#projects">Projects</a>
+                    <a class="nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium transition-colors" href="index.html#contact">Contact</a>
+                </nav>
 
-    <!--================ Start Banner Area =================-->
-    <section class="banner_area">
-        <div class="banner_inner d-flex align-items-center">
-            <div class="container">
-                <div class="banner_content text-center">
-                    <h2>projects</h2>
-                    <div class="page_link">
-                        <a href="index.html">Home</a>
-                        <a href="portfolio.html">projects</a>
-                    </div>
-                </div>
+                <!-- Theme Toggle Switcher -->
+                <button id="theme-toggle" class="text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-900 rounded-lg p-2 transition-colors focus:outline-none" aria-label="Toggle theme">
+                    <i id="theme-toggle-dark-icon" class="fa-solid fa-moon text-xl hidden"></i>
+                    <i id="theme-toggle-light-icon" class="fa-solid fa-sun text-xl hidden"></i>
+                </button>
+
+                <button id="menu-btn" class="md:hidden text-slate-500 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-white focus:outline-none p-2" aria-label="Toggle menu">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-6 py-4 flex flex-col gap-4">
+            <a class="mobile-nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-2 transition-colors border-b border-slate-200 dark:border-slate-800/50" href="index.html#home">Home</a>
+            <a class="mobile-nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-2 transition-colors border-b border-slate-200 dark:border-slate-800/50" href="index.html#about">About</a>
+            <a class="mobile-nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-2 transition-colors border-b border-slate-200 dark:border-slate-800/50" href="index.html#experience">Experience</a>
+            <a class="mobile-nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-2 transition-colors border-b border-slate-200 dark:border-slate-800/50" href="index.html#skills">Skills</a>
+            <a class="mobile-nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-2 transition-colors border-b border-slate-200 dark:border-slate-800/50" href="index.html#projects">Projects</a>
+            <a class="mobile-nav-link text-slate-600 dark:text-slate-300 hover:text-indigo-600 dark:hover:text-indigo-400 font-medium py-2 transition-colors" href="index.html#contact">Contact</a>
+        </div>
+    </header>
+
+    <!--================ Banner Area =================-->
+    <section class="pt-32 pb-12 bg-slate-100 dark:bg-slate-900/50 border-b border-slate-200 dark:border-slate-900">
+        <div class="container mx-auto px-4 md:px-8 text-center flex flex-col gap-4">
+            <h1 class="text-4xl font-extrabold text-slate-900 dark:text-white">Projects Showcase</h1>
+            <div class="flex items-center justify-center gap-2 text-sm text-slate-500">
+                <a href="index.html" class="hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors">Home</a>
+                <span>/</span>
+                <span class="text-indigo-600 dark:text-indigo-400 font-semibold">Projects</span>
             </div>
         </div>
     </section>
-    <!--================ End Banner Area =================-->
 
-	<!--================Start Portfolio Area =================-->
-	<section class="portfolio_area section_gap_top" id="portfolio">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="main_title text-left">
-                        <h2>
-                            Recently done project </h2>
-                    </div>
-                </div>
-            </div>
-            <div class="filters portfolio-filter">
-                <ul>
-                    <li class="active" data-filter="*">all</li>
-                    <li data-filter=".popular">popular</li>
-                    <li data-filter=".latest"> latest</li>
-                    <li data-filter=".following">following</li>
-                    <li data-filter=".upcoming">upcoming</li>
-                </ul>
-            </div>
-    
-            <div class="filters-content">
-				<div class="row portfolio-grid justify-content-center">
-					<div class="col-lg-4 col-md-6 all latest">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/Video-to-text.jpeg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/Video-to-text.jpeg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html#videototext">Video-To-Text Convertion Using Python</a></h4>
-								<p>Video-To-Convertion Using Python.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all popular">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/FingerDoor-lock-System.jpeg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/FingerDoor-lock-System.jpeg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html#fingerprint">Fingerprint Door Lock System Using Arduino</a></h4>
-								<p>Arduino,IOT.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all latest">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/Figma FoodApp.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/Figma FoodApp.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">Vichu's Food App FIGMA</a></h4>
-								<p>FIGMA, UI/UX.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all popular">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/To-do-List.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/To-do-List.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">To-Do-List</a></h4>
-								<p>To-Do-List -- Html,Css,JavaScript.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all following">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/AnimatedLogin-Page.png" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/AnimatedLogin-Page.png" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">Animated Login-Page and Facebook</a></h4>
-								<p>Login Page and Facebook Login -- HTML,CSS,Javascript.</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all upcoming">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p5.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p6.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">multiply fowl</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all upcoming following">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p7.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p7.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">green heaven</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all following">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p8.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p8.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4>fly male</h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-6 all upcoming">
-						<div class="portfolio_box">
-							<div class="single_portfolio">
-								<img class="img-fluid w-100" src="img/portfolio/p9.jpg" alt="">
-								<div class="overlay"></div>
-								<a href="img/portfolio/p9.jpg" class="img-gal">
-									<div class="icon">
-										<span class="lnr lnr-cross"></span>
-									</div>
-								</a>
-							</div>
-							<div class="short_info">
-								<h4><a href="portfolio-details.html">season face</a></h4>
-								<p>Animated, portfolio</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-        </div>
-    </section>
-    <!--================End Portfolio Area =================-->
-    
-    <!--================ Start Newsletter Area =================-->
-    <!-- <section class="newsletter_area">
-        <div class="container">
-            <div class="row justify-content-center align-items-center">
-                <div class="col-lg-12">
-                    <div class="subscription_box text-center">
-                        <h2 class="text-uppercase text-white">get update from anywhere</h2>
-                        <p class="text-white">
-                            Bearing Void gathering light light his eavening unto dont afraid. 
-                        </p>
-                        <div class="subcribe-form" id="mc_embed_signup">
-                            <form target="_blank" novalidate="true" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="subscription relative">
-                                <input name="EMAIL" placeholder="Email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email address'" required="" type="email">
-                                <div style="position: absolute; left: -5000px;">
-                                    <input name="b_36c4fd991d266f23781ded980_aefe40901a" tabindex="-1" value="" type="text">
-                                </div>
-                                <button class="primary-btn hover d-inline">Get Started</button>
-                                <div class="info"></div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-    <!--================ End Newsletter Area =================-->
+    <!--================ Standalone Projects Grid =================-->
+    <main class="container mx-auto px-4 md:px-8 py-16">
         
-        <!--================Footer Area =================-->
-	<footer class="footer_area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-12">
-                    <div class="footer_top flex-column">
-                        <div class="footer_logo">
-                            <a href="#">
-                                <img src="img/logo.png" alt="">
-                            </a>
-                            <h4>Follow Me</h4>
-                        </div>
-                        <div class="footer_social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-behance"></i></a>
-                        </div>
+        <!-- Project Filter Tabs -->
+        <div class="flex items-center justify-center gap-2 sm:gap-4 mb-16">
+            <button class="filter-btn active px-6 py-2 rounded-full text-sm font-semibold transition-all border border-slate-200 dark:border-slate-800 bg-indigo-600 text-white" data-filter="all">
+                All
+            </button>
+            <button class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700" data-filter="worked">
+                Projects Worked
+            </button>
+            <button class="filter-btn px-6 py-2 rounded-full text-sm font-semibold transition-all border border-slate-200 dark:border-slate-800 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:border-slate-300 dark:hover:border-slate-700" data-filter="college">
+                College Projects
+            </button>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- PROFESSIONAL PROJECT 1: Sports ERP Platform -->
+            <div class="project-card worked glass-panel bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:border-indigo-500/30 dark:hover:border-indigo-500/30 transition-all duration-300 group flex flex-col h-full shadow-sm hover:shadow-md">
+                <div class="relative aspect-video overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80" alt="Sports ERP Platform">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/10 dark:from-slate-950/40 to-transparent"></div>
+                    <span class="absolute top-4 right-4 bg-indigo-600 text-white text-xs px-3 py-1 rounded-full font-bold uppercase tracking-wider">Active</span>
+                </div>
+                <div class="p-6 flex flex-col flex-grow gap-4">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Sports ERP Platform</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm flex-grow">
+                        Comprehensive ERP system built to coordinate and manage athletes, tournament calendars, coaching staff assignments, training schedules, and analytics modules.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">React.js</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">Node.js</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">PostgreSQL</span>
                     </div>
+                    <a href="portfolio-details.html#sports-erp" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-505 dark:hover:text-indigo-300 text-sm font-semibold flex items-center gap-2 mt-2">
+                        View Details <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
-            <div class="row footer_bottom justify-content-center">
-                <p class="col-lg-8 col-sm-12 footer-text">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					Copyright &copy;<script>document.write(new Date().getFullYear());</script>  <i class="fa fa-heart-o" aria-hidden="true"></i> by Vishnu Prakash
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+
+            <!-- PROFESSIONAL PROJECT 2: Asset Management System -->
+            <div class="project-card worked glass-panel bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:border-indigo-500/30 dark:hover:border-indigo-500/30 transition-all duration-300 group flex flex-col h-full shadow-sm hover:shadow-md">
+                <div class="relative aspect-video overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Asset Management & Tracking System">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/10 dark:from-slate-950/40 to-transparent"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow gap-4">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Asset Tracking System</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm flex-grow">
+                        An enterprise system tracking equipment inspections, schedules, and work orders. Built with highly modular state management and responsive PrimeReact components.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">React.js</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">TypeScript</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">Redux</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">MongoDB</span>
+                    </div>
+                    <a href="portfolio-details.html#asset-tracking" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-505 dark:hover:text-indigo-300 text-sm font-semibold flex items-center gap-2 mt-2">
+                        View Details <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
             </div>
+
+            <!-- PROFESSIONAL PROJECT 3: ERP Dashboard Applications -->
+            <div class="project-card worked glass-panel bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:border-indigo-500/30 dark:hover:border-indigo-500/30 transition-all duration-300 group flex flex-col h-full shadow-sm hover:shadow-md">
+                <div class="relative aspect-video overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="ERP Dashboard Applications">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/10 dark:from-slate-950/40 to-transparent"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow gap-4">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">ERP Dashboard Apps</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm flex-grow">
+                        Designed and deployed complex dashboard configurations, analytics panels, and automated report generators displaying real-time data metrics.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">React.js</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">Tailwind CSS</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">Chart.js</span>
+                    </div>
+                    <a href="portfolio-details.html#erp-dashboards" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-505 dark:hover:text-indigo-300 text-sm font-semibold flex items-center gap-2 mt-2">
+                        View Details <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- COLLEGE PROJECT 1: Video-To-Text (College) -->
+            <div class="project-card college glass-panel bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:border-indigo-500/30 dark:hover:border-indigo-500/30 transition-all duration-300 group flex flex-col h-full shadow-sm hover:shadow-md">
+                <div class="relative aspect-video overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/Video-to-text.jpeg" alt="Video to Text Converter" onerror="this.src='https://placehold.co/600x350/0f172a/fff?text=Video+To+Text'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/10 dark:from-slate-950/40 to-transparent"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow gap-4">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Video to Text Converter</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm flex-grow">
+                        Developed an automated tool in Python utilizing advanced speech recognition APIs to convert audio and video files into structured transcripts for the hearing-impaired.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">Python</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">Speech API</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">VS Code</span>
+                    </div>
+                    <a href="portfolio-details.html#videototext" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-505 dark:hover:text-indigo-300 text-sm font-semibold flex items-center gap-2 mt-2">
+                        View Details <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- COLLEGE PROJECT 2: Fingerprint Lock (College) -->
+            <div class="project-card college glass-panel bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:border-indigo-500/30 dark:hover:border-indigo-500/30 transition-all duration-300 group flex flex-col h-full shadow-sm hover:shadow-md">
+                <div class="relative aspect-video overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/FingerDoor-lock-System.jpeg" alt="Fingerprint Lock System" onerror="this.src='https://placehold.co/600x350/0f172a/fff?text=Fingerprint+Lock+System'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/10 dark:from-slate-950/40 to-transparent"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow gap-4">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Fingerprint Door Lock</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm flex-grow">
+                        Designed a physical security solution using an Arduino Uno, a biometric fingerprint sensor, a relay unit, and a solenoid lock mechanism. Supported by continuous relock capabilities.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">Arduino</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">IoT Sensors</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">Hardware</span>
+                    </div>
+                    <a href="portfolio-details.html#fingerprint" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-505 dark:hover:text-indigo-300 text-sm font-semibold flex items-center gap-2 mt-2">
+                        View Details <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- COLLEGE PROJECT 3: Food App Figma (College) -->
+            <div class="project-card college glass-panel bg-white dark:bg-slate-900/60 border border-slate-200 dark:border-slate-800 rounded-2xl overflow-hidden hover:border-indigo-500/30 dark:hover:border-indigo-500/30 transition-all duration-300 group flex flex-col h-full shadow-sm hover:shadow-md">
+                <div class="relative aspect-video overflow-hidden">
+                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="img/portfolio/Figma FoodApp.png" alt="Food App UI Design" onerror="this.src='https://placehold.co/600x350/0f172a/fff?text=Figma+Food+App'">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-900/10 dark:from-slate-950/40 to-transparent"></div>
+                </div>
+                <div class="p-6 flex flex-col flex-grow gap-4">
+                    <h3 class="text-xl font-bold text-slate-900 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors">Vichu's Food App (UI/UX)</h3>
+                    <p class="text-slate-600 dark:text-slate-400 text-sm flex-grow">
+                        Created a detailed user flow and high-fidelity prototype in Figma for a food ordering app, focusing on cart interactions and checkout layouts.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mb-2">
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">Figma</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">UI/UX</span>
+                        <span class="bg-slate-100 dark:bg-slate-900 text-indigo-600 dark:text-slate-300 px-2.5 py-0.5 rounded text-xs font-semibold">Prototyping</span>
+                    </div>
+                    <a href="portfolio-details.html#figmafoodapp" class="text-indigo-600 dark:text-indigo-400 hover:text-indigo-505 dark:hover:text-indigo-300 text-sm font-semibold flex items-center gap-2 mt-2">
+                        View Details <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!--================ Footer Area =================-->
+    <footer class="border-t border-slate-200 dark:border-slate-900 bg-slate-100 dark:bg-slate-900 py-12">
+        <div class="container mx-auto px-4 md:px-8 text-center flex flex-col items-center gap-6">
+            <h4 class="text-slate-900 dark:text-white font-bold text-lg">Follow Me</h4>
+            <div class="flex items-center justify-center gap-6">
+                <a href="#" aria-label="Facebook" class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-500/30 transition-all"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Twitter" class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-500/30 transition-all"><i class="fa-brands fa-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/vishnu-prakash-34942b263/" target="_blank" aria-label="LinkedIn" class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-500/30 transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub" class="w-10 h-10 rounded-full border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:border-indigo-500/30 transition-all"><i class="fa-brands fa-github"></i></a>
+            </div>
+            <p class="text-slate-500 dark:text-slate-500 text-sm">
+                Copyright &copy; <span id="current-year"></span> <i class="fa-solid fa-heart text-indigo-500/50 mx-1"></i> by Vishnu Prakash
+            </p>
         </div>
     </footer>
-    <!--================End Footer Area =================-->
-    
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/popper.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/stellar.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
-    <script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
-    <script src="vendors/isotope/isotope-min.js"></script>
-    <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="js/jquery.ajaxchimp.min.js"></script>
-    <script src="js/mail-script.js"></script>
-    <!--gmaps Js-->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
-    <script src="js/gmaps.min.js"></script>
-    <script src="js/theme.js"></script>
-</body>
 
+    <!-- JavaScript logic -->
+    <script>
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+
+        // Theme Toggle Script
+        const themeToggle = document.getElementById('theme-toggle');
+        const darkIcon = document.getElementById('theme-toggle-dark-icon');
+        const lightIcon = document.getElementById('theme-toggle-light-icon');
+
+        if (localStorage.getItem('color-theme') === 'light' || (!('color-theme' in localStorage) && !window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.remove('dark');
+            lightIcon.classList.add('hidden');
+            darkIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.add('dark');
+            darkIcon.classList.add('hidden');
+            lightIcon.classList.remove('hidden');
+        }
+
+        themeToggle.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+                lightIcon.classList.add('hidden');
+                darkIcon.classList.remove('hidden');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+                darkIcon.classList.add('hidden');
+                lightIcon.classList.remove('hidden');
+            }
+        });
+
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-indigo-600', 'text-white', 'active');
+                    b.classList.add('text-slate-600', 'dark:text-slate-300', 'hover:text-slate-900', 'dark:hover:text-white');
+                });
+                btn.classList.add('bg-indigo-600', 'text-white', 'active');
+                btn.classList.remove('text-slate-600', 'dark:text-slate-300', 'hover:text-slate-900', 'dark:hover:text-white');
+
+                const filter = btn.getAttribute('data-filter');
+
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.classList.contains(filter)) {
+                        card.classList.remove('hidden');
+                        card.classList.add('flex');
+                    } else {
+                        card.classList.remove('flex');
+                        card.classList.add('hidden');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
 </html>
