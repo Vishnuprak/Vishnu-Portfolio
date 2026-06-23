@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 const smtp_host = process.env.SMTP_HOST || 'smtp.gmail.com';
 const smtp_port = parseInt(process.env.SMTP_PORT || '587', 10);
 const smtp_username = process.env.SMTP_USERNAME || 'vishnuprakashdharmaraj@gmail.com';
-const smtp_password = process.env.SMTP_PASSWORD || 'vichu@001';
+const smtp_password = process.env.SMTP_PASSWORD || 'tyanmnjrxomqgztg';
 const recipient_email = process.env.RECIPIENT_EMAIL || 'vishnuprakashdharmaraj@gmail.com';
 const smtp_encryption = process.env.SMTP_ENCRYPTION || 'tls';
 

@@ -1,0 +1,14 @@
+2026-06-23 18:21:30.079 [error] Mailer Error: Error: No recipients defined
+    at SMTPConnection._formatError (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:809:19)
+    at SMTPConnection._setEnvelope (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:1047:34)
+    at SMTPConnection.send (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:631:14)
+    at sendMessage (/var/task/node_modules/nodemailer/lib/smtp-transport/index.js:228:28)
+    at /var/task/node_modules/nodemailer/lib/smtp-transport/index.js:286:25
+    at SMTPConnection._actionAUTHComplete (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:1602:9)
+    at SMTPConnection.<anonymous> (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:556:26)
+    at SMTPConnection._processResponse (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:993:20)
+    at SMTPConnection._onData (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:774:14)
+    at SMTPConnection._onSocketData (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:195:44) {
+  code: 'EENVELOPE',
+  command: 'API'
+}

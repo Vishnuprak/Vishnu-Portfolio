@@ -27,9 +27,9 @@ export default async function handler(req, res) {
 
   const smtp_host = process.env.SMTP_HOST || 'smtp.gmail.com';
   const smtp_port = parseInt(process.env.SMTP_PORT || '587', 10);
-  const smtp_username = process.env.SMTP_USERNAME;
-  const smtp_password = process.env.SMTP_PASSWORD;
-  const recipient_email = process.env.RECIPIENT_EMAIL || smtp_username;
+  const smtp_username = process.env.SMTP_USERNAME || 'vishnuprakashdharmaraj@gmail.com';
+  const smtp_password = process.env.SMTP_PASSWORD || 'tyanmnjrxomqgztg';
+  const recipient_email = process.env.RECIPIENT_EMAIL || smtp_username || 'vishnuprakashdharmaraj@gmail.com';
   const smtp_encryption = process.env.SMTP_ENCRYPTION || 'tls';
 
   const isSecure = smtp_encryption.toLowerCase() === 'ssl' || smtp_port === 465;
