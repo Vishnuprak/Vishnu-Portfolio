@@ -27,10 +27,34 @@ export default async function handler(req, res) {
 
   const smtp_host = process.env.SMTP_HOST || 'smtp.gmail.com';
   const smtp_port = parseInt(process.env.SMTP_PORT || '587', 10);
-  const smtp_username = process.env.SMTP_USERNAME || 'vishnuprakashdharmaraj@gmail.com';
-  const smtp_password = process.env.SMTP_PASSWORD || 'tyanmnjrxomqgztg';
-  const recipient_email = process.env.RECIPIENT_EMAIL || smtp_username || 'vishnuprakashdharmaraj@gmail.com';
+  
+  // Retrieve config and sanitize if the string "undefined", "null", or empty is passed
+  let smtp_username = process.env.SMTP_USERNAME;
+  if (!smtp_username || smtp_username === 'undefined' || smtp_username === 'null' || smtp_username.trim() === '') {
+    smtp_username = 'vishnuprakashdharmaraj@gmail.com';
+  }
+
+  let smtp_password = process.env.SMTP_PASSWORD;
+  if (!smtp_password || smtp_password === 'undefined' || smtp_password === 'null' || smtp_password.trim() === '') {
+    smtp_password = 'tyanmnjrxomqgztg';
+  }
+
+  let recipient_email = process.env.RECIPIENT_EMAIL;
+  if (!recipient_email || recipient_email === 'undefined' || recipient_email === 'null' || recipient_email.trim() === '') {
+    recipient_email = smtp_username;
+  }
+
   const smtp_encryption = process.env.SMTP_ENCRYPTION || 'tls';
+
+  console.log('[DEBUG] SMTP config:', {
+    host: smtp_host,
+    port: smtp_port,
+    username: smtp_username,
+    recipient: recipient_email,
+    encryption: smtp_encryption,
+    hasPassword: !!smtp_password
+  });
+  console.log('[DEBUG] Request body:', req.body);
 
   const isSecure = smtp_encryption.toLowerCase() === 'ssl' || smtp_port === 465;
 

@@ -1,4 +1,4 @@
-2026-06-23 18:21:30.079 [error] Mailer Error: Error: No recipients defined
+2026-06-23 18:31:56.762 [error] Mailer Error: Error: No recipients defined
     at SMTPConnection._formatError (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:809:19)
     at SMTPConnection._setEnvelope (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:1047:34)
     at SMTPConnection.send (/var/task/node_modules/nodemailer/lib/smtp-connection/index.js:631:14)

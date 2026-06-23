@@ -24,9 +24,22 @@ app.use((req, res, next) => {
 // SMTP configuration
 const smtp_host = process.env.SMTP_HOST || 'smtp.gmail.com';
 const smtp_port = parseInt(process.env.SMTP_PORT || '587', 10);
-const smtp_username = process.env.SMTP_USERNAME || 'vishnuprakashdharmaraj@gmail.com';
-const smtp_password = process.env.SMTP_PASSWORD || 'tyanmnjrxomqgztg';
-const recipient_email = process.env.RECIPIENT_EMAIL || 'vishnuprakashdharmaraj@gmail.com';
+
+let smtp_username = process.env.SMTP_USERNAME;
+if (!smtp_username || smtp_username === 'undefined' || smtp_username === 'null' || smtp_username.trim() === '') {
+  smtp_username = 'vishnuprakashdharmaraj@gmail.com';
+}
+
+let smtp_password = process.env.SMTP_PASSWORD;
+if (!smtp_password || smtp_password === 'undefined' || smtp_password === 'null' || smtp_password.trim() === '') {
+  smtp_password = 'tyanmnjrxomqgztg';
+}
+
+let recipient_email = process.env.RECIPIENT_EMAIL;
+if (!recipient_email || recipient_email === 'undefined' || recipient_email === 'null' || recipient_email.trim() === '') {
+  recipient_email = smtp_username;
+}
+
 const smtp_encryption = process.env.SMTP_ENCRYPTION || 'tls';
 
 const isSecure = smtp_encryption.toLowerCase() === 'ssl' || smtp_port === 465;
