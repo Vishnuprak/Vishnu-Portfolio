@@ -1,4 +1,4 @@
-import nodemailer from 'nodemailer';
+import { Resend } from 'resend';
 
 export default async function handler(req, res) {
   // Add CORS headers for safety
@@ -25,57 +25,35 @@ export default async function handler(req, res) {
     return res.status(400).send('Bad Request: Missing required fields');
   }
 
-  const smtp_host = process.env.SMTP_HOST || 'smtp.gmail.com';
-  const smtp_port = parseInt(process.env.SMTP_PORT || '587', 10);
-  
-  // Retrieve config and sanitize if the string "undefined", "null", or empty is passed
-  let smtp_username = process.env.SMTP_USERNAME;
-  if (!smtp_username || smtp_username === 'undefined' || smtp_username === 'null' || smtp_username.trim() === '') {
-    smtp_username = 'vishnuprakashdharmaraj@gmail.com';
+  let resend_api_key = process.env.RESEND_API_KEY;
+  if (!resend_api_key || resend_api_key === 'undefined' || resend_api_key === 'null' || resend_api_key.trim() === '') {
+    resend_api_key = '';
   }
 
-  let smtp_password = process.env.SMTP_PASSWORD;
-  if (!smtp_password || smtp_password === 'undefined' || smtp_password === 'null' || smtp_password.trim() === '') {
-    smtp_password = 'tyanmnjrxomqgztg';
-  }
+  const resend = new Resend(resend_api_key);
 
   let recipient_email = process.env.RECIPIENT_EMAIL;
   if (!recipient_email || recipient_email === 'undefined' || recipient_email === 'null' || recipient_email.trim() === '') {
-    recipient_email = smtp_username;
+    recipient_email = 'vishnuprakashdharmaraj@gmail.com';
   }
 
-  const smtp_encryption = process.env.SMTP_ENCRYPTION || 'tls';
+  let resend_from = process.env.RESEND_FROM;
+  if (!resend_from || resend_from === 'undefined' || resend_from === 'null' || resend_from.trim() === '') {
+    resend_from = 'onboarding@resend.dev';
+  }
 
-  console.log('[DEBUG] SMTP config:', {
-    host: smtp_host,
-    port: smtp_port,
-    username: smtp_username,
+  console.log('[DEBUG] Resend config:', {
     recipient: recipient_email,
-    encryption: smtp_encryption,
-    hasPassword: !!smtp_password
+    from: resend_from,
+    hasApiKey: !!resend_api_key
   });
   console.log('[DEBUG] Request body:', req.body);
 
-  const isSecure = smtp_encryption.toLowerCase() === 'ssl' || smtp_port === 465;
-
-  const transporter = nodemailer.createTransport({
-    host: smtp_host,
-    port: smtp_port,
-    secure: isSecure,
-    auth: {
-      user: smtp_username,
-      pass: smtp_password,
-    },
-    tls: {
-      rejectUnauthorized: false
-    }
-  });
-
   try {
-    const mailOptions = {
-      from: `"${name} (${email})" <${smtp_username}>`,
-      replyTo: `"${name}" <${email}>`,
+    const { data, error } = await resend.emails.send({
+      from: `"${name} (${email})" <${resend_from}>`,
       to: recipient_email,
+      replyTo: email,
       subject: subject,
       html: `
         <h3>New Contact Form Message</h3>
@@ -84,12 +62,16 @@ export default async function handler(req, res) {
         <p><strong>Subject:</strong> ${subject}</p>
         <p><strong>Message:</strong><br>${message.replace(/\n/g, '<br>')}</p>
       `
-    };
+    });
 
-    await transporter.sendMail(mailOptions);
+    if (error) {
+      console.error('Resend Error:', error);
+      return res.status(500).send(`Message could not be sent. Resend Error: ${error.message}`);
+    }
+
     return res.send('Message has been sent');
   } catch (error) {
-    console.error('Mailer Error:', error);
-    return res.status(500).send(`Message could not be sent. Mailer Error: ${error.message}`);
+    console.error('Resend Exception:', error);
+    return res.status(500).send(`Message could not be sent. Server Error: ${error.message}`);
   }
 }

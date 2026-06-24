@@ -86,29 +86,30 @@ export default function App() {
   // Data
   const experiences: ExperienceItem[] = [
     {
-      role: 'Development Executive (Full Stack Developer)',
+      role: 'Full-Stack Developer (Development Executive)',
       company: "Jeff's Group of Companies",
-      location: 'Bangalore',
+      location: 'Bangalore, India',
       timeline: 'Mar 2026 - Present',
-      desc: 'Developing a comprehensive Sports ERP platform for managing athletes, coaches, teams, tournaments, training programs, and performance analytics. Working on both Frontend and Backend, designing scalable workflow architectures, and optimizing database queries.',
-      tech: ['React.js', 'Node.js', 'PostgreSQL', 'TypeScript', 'REST APIs'],
+      desc: 'Developing an enterprise Sports ERP platform for managing athletes, coaches, team rosters, tournament brackets, and training metrics. Designing scalable workflow architectures, engineering RESTful APIs with Node.js and Express.js, and optimizing complex PostgreSQL queries.',
+      tech: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'TypeScript', 'REST APIs'],
       type: 'work'
     },
     {
       role: 'Software Developer',
       company: 'Mazeworks solutions Pvt Ltd',
-      location: 'Chennai',
+      location: 'Chennai, India',
       timeline: 'Jun 2024 - Feb 2026',
-      desc: 'Built responsive and reusable UI dashboards for ERP applications. Managed inspections, work orders, and tracking arrays on an Asset Management System with Redux state handling.',
-      tech: ['React.js', 'TypeScript', 'Redux', 'Tailwind CSS', 'PrimeReact', 'MongoDB'],
+      desc: 'Engineered responsive, dynamic ERP layouts and analytics dashboards. Implemented core asset tracking logs, equipment inspections, and automated work orders within an Asset Management System utilizing Redux for centralized state management.',
+      tech: ['React', 'TypeScript', 'Redux', 'Tailwind CSS', 'PrimeReact', 'MongoDB', 'Express.js'],
       type: 'work'
     },
     {
       role: 'Software Developer - Intern',
       company: 'Mazeworks solutions Pvt Ltd',
-      location: 'Chennai',
+      location: 'Chennai, India',
       timeline: 'Feb 2024 - Jun 2024',
-      desc: 'Learned React.js core structures, Git logic, and Agile methodologies. Supported development sprints and assisted in debugging codebases.',
+      desc: 'Gained hands-on experience with React core concepts, Git workflow patterns, and Agile/Scrum methodologies. Contributed to development sprint goals, assisted in debugging codebase errors, and refactored reusable UI components.',
+      tech: ['React', 'JavaScript', 'HTML5', 'CSS3', 'Git', 'Agile'],
       type: 'intern'
     }
   ];
@@ -118,16 +119,16 @@ export default function App() {
       id: 'sports-erp',
       title: 'Sports ERP Platform',
       category: 'worked',
-      description: 'Comprehensive ERP system built to coordinate and manage athletes, tournament calendars, coaching staff assignments, training schedules, and performance metrics.',
-      tech: ['React.js', 'Node.js', 'PostgreSQL', 'TypeScript'],
+      description: 'An enterprise-grade Sports ERP platform designed to coordinate and manage athletes, tournament calendars, coaching rosters, training schedules, and performance analytics.',
+      tech: ['React', 'Node.js', 'Express.js', 'PostgreSQL', 'TypeScript'],
       image: 'https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=600&q=80',
       featured: true,
       details: {
-        description: 'Developing a comprehensive Sports ERP platform designed to manage athletes, coaches, teams, tournaments, training programs, and performance analytics. This application integrates both backend APIs and frontend user portals to handle massive databases and complex business workflows.',
+        description: 'Developed an end-to-end Sports ERP application designed to manage athletes, coaches, teams, tournament calendars, training schedules, and multi-dimensional performance metrics. The platform integrates responsive user portals with a secure administrative dashboard, processing high-volume databases and automating complex operational workflows.',
         objectivesTitle: 'Description & Objectives',
-        objectivesText: 'The core goal is to deliver a streamlined dashboard for sports complexes and academies to schedule training programs, analyze progress metrics, and handle operations under one secure interface.',
+        objectivesText: 'The core objective is to deliver a unified, secure platform for sports organizations and complexes to schedule training programs, analyze athlete progress indicators, and streamline operational scheduling via dynamic analytical reporting.',
         processTitle: 'Process & Engineering',
-        processText: 'We set up a robust, scalable architecture with Node.js and PostgreSQL. Designed database schemas with optimized querying mechanics to easily display performance graphs. Constructed reusable frontend elements in React and integrated core REST API channels.',
+        processText: 'Engineered a scalable backend API using Node.js, Express.js, and TypeScript, backed by an optimized PostgreSQL database. Designed relational schemas with index optimizations to ensure low-latency retrieval of performance analytics. Developed reusable frontend interfaces in React and integrated RESTful endpoints.',
         company: "Jeff's Group of Companies, Bangalore",
         position: 'Development Executive (Full Stack Developer)',
         timeline: 'Mar 2026 - Present'
@@ -137,15 +138,15 @@ export default function App() {
       id: 'asset-tracking',
       title: 'Asset Tracking System',
       category: 'worked',
-      description: 'An enterprise workspace tracking equipment inspections, schedules, and active work orders. Built with modular state parameters and PrimeReact grids.',
-      tech: ['React.js', 'TypeScript', 'Redux', 'MongoDB', 'PrimeReact'],
+      description: 'An enterprise asset management workspace designed to monitor equipment lifecycles, schedule routine inspections, and manage operational work orders.',
+      tech: ['React', 'TypeScript', 'Redux', 'MongoDB', 'PrimeReact', 'Express.js'],
       image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80',
       details: {
-        description: 'Built a central digital workspace for managing company assets, routine equipment inspections, and scheduled work orders. The application features full responsive controls and reusable grids.',
+        description: 'Engineered a centralized web portal for real-time tracking of company hardware assets, automated scheduling of preventive maintenance inspections, and digital work order assignment. Utilizes fully responsive layouts and high-performance tabular interfaces.',
         objectivesTitle: 'Description',
-        objectivesText: 'Enables rapid inspection recording, status logs updates, and detailed field diagnostics reports for mechanical infrastructure assets.',
+        objectivesText: 'Streamline inspection workflows, automate status log updates, and export comprehensive diagnostic records for mechanical and electrical infrastructure assets.',
         processTitle: 'Engineering Process',
-        processText: 'Designed highly structured forms and tables in React using PrimeReact. Configured Redux to manage global dashboard states and connected Express/MongoDB endpoints to stream asset parameters in real-time.',
+        processText: 'Developed structured forms, validation layers, and interactive tables using React and PrimeReact. Implemented Redux Toolkit for unified client state management. Designed a RESTful backend using Express.js and MongoDB to ingest and serve asset metrics with sub-second latency.',
         company: 'Mazeworks solutions Pvt Ltd, Chennai',
         timeline: 'Jun 2024 - Feb 2026'
       }
@@ -154,13 +155,13 @@ export default function App() {
       id: 'erp-dashboards',
       title: 'ERP Dashboard Apps',
       category: 'worked',
-      description: 'Designed and deployed complex dashboard configurations, analytics panels, and automated report generators displaying real-time data metrics.',
-      tech: ['React.js', 'Tailwind CSS', 'Chart.js'],
+      description: 'Designed and deployed dynamic analytics dashboards and automated reporting modules for enterprise resources planning, displaying live KPI metrics.',
+      tech: ['React', 'Tailwind CSS', 'Chart.js', 'TypeScript'],
       image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80',
       details: {
-        description: 'Designed and developed clean, customizable dashboard layouts for various ERP systems. The dashboards display key indicators, analytical graphs, and visual reports.',
+        description: 'Developed responsive and customizable dashboard layouts for various modules of enterprise resource planning (ERP) suites. These dashboards consolidate vital KPIs, interactive data visualizations, and detailed business intelligence reports.',
         objectivesTitle: 'Overview',
-        objectivesText: 'Custom modules were generated to render live performance telemetry and business records across interactive components.',
+        objectivesText: 'Engineered custom widgets and charting containers to aggregate and render live operational metrics and financial ledgers, enhancing organizational decision-making.',
         company: 'Mazeworks solutions Pvt Ltd, Chennai',
         timeline: 'Jun 2024 - Feb 2026'
       }
@@ -169,15 +170,15 @@ export default function App() {
       id: 'videototext',
       title: 'Video to Text Converter',
       category: 'college',
-      description: 'Developed an automated tool in Python utilizing speech recognition APIs to convert audio and video files into structured transcripts for the hearing-impaired.',
-      tech: ['Python', 'Speech API', 'Tkinter UI', 'VS Code'],
+      description: 'Developed an automated desktop application in Python that extracts audio from video containers and runs speech recognition models to generate structured transcripts.',
+      tech: ['Python', 'Speech Recognition APIs', 'Tkinter', 'FFmpeg'],
       image: '/img/portfolio/Video-to-text.jpeg',
       details: {
-        description: 'Developed an accessibility tool designed specifically for hearing-aided individuals to transcribe spoken details from video formats into readable text files automatically, assisting in note-taking and video comprehension.',
+        description: 'Created an assistive utility designed to transcribe speech from various video and audio formats into searchable text files, facilitating media accessibility for hearing-impaired users and simplifying academic note-taking.',
         objectivesTitle: 'Objective',
-        objectivesText: 'Provide a standalone desktop interface to transform audio streams into textual formats accurately, enhancing transcription convenience for media assets.',
+        objectivesText: 'Deliver a reliable desktop client to programmatically strip audio from files, query speech-to-text models, and export timestamped, formatted transcripts.',
         processTitle: 'Process & System Architecture',
-        processText: 'The project uses Python to extract audio tracks from uploads. It applies speech-to-text algorithm pipelines via cloud APIs to transcribe the vocal segments into exact string buffers. A basic graphical desktop dashboard constructed via Tkinter enables seamless video uploading and file exporting.',
+        processText: 'Programmed a Python application that uses subprocesses (e.g., FFmpeg) to extract audio tracks. Implemented speech-to-text processing using speech recognition libraries to transcribe spoken dialog into string buffers. Built a graphical user interface (GUI) using Tkinter to manage video uploads, conversion queues, and text output exports.',
         teamMembers: 'Vishnu Prakash D (Lead), Gopi GR, Gokulan M, Ravi Teja',
         institution: 'Kalasalingam Academy of Research and Education',
         completed: 'May 2023'
@@ -187,15 +188,15 @@ export default function App() {
       id: 'fingerprint',
       title: 'Fingerprint Door Lock',
       category: 'college',
-      description: 'Designed a physical security solution using an Arduino Uno, a biometric fingerprint sensor, a relay unit, and a solenoid lock mechanism.',
-      tech: ['Arduino', 'IoT Sensors', 'C++ (Embedded)', 'Hardware'],
+      description: 'Engineered a biometric access control system combining Arduino microcontrollers, optical fingerprint sensors, and electrical relay switching for secure door locking.',
+      tech: ['Arduino', 'C++ (Embedded)', 'Biometrics', 'IoT Hardware'],
       image: '/img/portfolio/FingerDoor-lock-System.jpeg',
       details: {
-        description: 'Designed an access control system combining microcontrollers with biometric authentication to replace physical key locks, ensuring restricted access authorization.',
+        description: 'Designed and assembled an IoT access control unit utilizing biometric authentication to replace physical key mechanisms, enhancing residential or office security.',
         objectivesTitle: 'Objective',
-        objectivesText: 'Build a secure, hardware-driven locking unit capable of storing individual finger print templates and granting entrance permissions.',
+        objectivesText: 'Implement a secure embedded system capable of capturing, storing, and matching biometric fingerprint templates, sending output signals to trigger physical locks.',
         processTitle: 'Process & Engineering',
-        processText: 'Integrated an optical fingerprint sensor with an Arduino Uno. The microcontroller processes scan arrays, compares user templates within local buffers, and triggers a 12V relay module upon authentication, opening a heavy-duty solenoid latch lock for 5 seconds.',
+        processText: 'Interfaced an optical biometric scanner with an Arduino Uno over serial communications. Configured the microcontroller firmware in C++ to process scan packets, run verification algorithms against stored templates, and actuate a 12V relay module to power a solenoid latch upon successful identification.',
         demoVideo: '/img/FingerprintDoorLockSystem.mp4',
         teamMembers: 'Vishnu Prakash D (Lead), Gopi GR, Shakthi G, Vignesh C, Gangaiah',
         institution: 'Kalasalingam Academy of Research and Education',
@@ -206,13 +207,13 @@ export default function App() {
       id: 'figmafoodapp',
       title: "Vichu's Food App (UI/UX)",
       category: 'college',
-      description: 'Created a detailed user flow and high-fidelity prototype in Figma for a food ordering app, focusing on cart interactions and checkout layouts.',
+      description: 'Designed user journeys and a high-fidelity prototype in Figma for an on-demand food ordering platform, refining checkout and shopping cart micro-interactions.',
       tech: ['Figma', 'UI/UX Design', 'Wireframing', 'Prototyping'],
       image: '/img/portfolio/Figma FoodApp.png',
       details: {
-        description: 'Created a detailed user flow and high-fidelity prototype in Figma for a food ordering app, focusing on cart interactions and checkout layouts.',
+        description: 'Designed user journeys and a high-fidelity prototype in Figma for an on-demand food ordering platform, refining checkout and shopping cart micro-interactions.',
         objectivesTitle: 'Objective',
-        objectivesText: 'To sketch, model, and prototype a food delivery application in Figma. We studied market competitor designs, mapped user flows, designed structural wireframes, and linked pages to form prototypes.',
+        objectivesText: 'Conducted competitor analyses, designed wireframes, established a cohesive typography and color design system, and mapped out smooth navigation transitions to create an interactive click-through prototype.',
         role: 'UI/UX Designer',
         completed: 'Dec 2023'
       }
@@ -270,8 +271,10 @@ export default function App() {
       {/* Header */}
       <header className="fixed top-0 left-0 w-full z-50 glass-nav bg-white/80 dark:bg-slate-950/75 border-b border-slate-200/50 dark:border-slate-800/50 transition-all duration-300 py-4">
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
-          <a href="#home">
-            <img className="h-10 md:h-12 w-auto" src="/img/Vishnu_Prakash_logo.png" alt="Logo" />
+          <a href="#home" className="flex items-center">
+            <span className="text-xl md:text-2xl font-extrabold tracking-wider text-[#004BA9] dark:text-blue-400 transition-colors">
+              VISHNU PRAKASH
+            </span>
           </a>
 
           <div className="flex items-center gap-4">
@@ -426,7 +429,7 @@ export default function App() {
               <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-xl font-bold"><FontAwesomeIcon icon={faCode} /></div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Frontend</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">React.js, TypeScript, JavaScript, HTML5/CSS3, Tailwind CSS, Redux, PrimeReact</p>
+                <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">React, TypeScript, JavaScript, HTML5/CSS3, Tailwind CSS, Redux Toolkit, PrimeReact</p>
               </div>
             </div>
             {/* Backend */}
@@ -434,7 +437,7 @@ export default function App() {
               <div className="w-12 h-12 rounded-xl bg-violet-500/10 flex items-center justify-center text-violet-600 dark:text-violet-400 text-xl font-bold"><FontAwesomeIcon icon={faGears} /></div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Backend & APIs</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">Node.js, Express.js, RESTful API design, server architecture</p>
+                <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">Node.js, Express.js, RESTful API Design, System Architecture</p>
               </div>
             </div>
             {/* Database */}
@@ -442,7 +445,7 @@ export default function App() {
               <div className="w-12 h-12 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-600 dark:text-emerald-400 text-xl font-bold"><FontAwesomeIcon icon={faDatabase} /></div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Databases</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">PostgreSQL, MongoDB, SQL query optimization, Schema layout</p>
+                <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">PostgreSQL, MongoDB, SQL Query Optimization, Relational/Non-Relational Schema Design</p>
               </div>
             </div>
             {/* Tools */}
@@ -450,7 +453,7 @@ export default function App() {
               <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center text-indigo-600 dark:text-indigo-400 text-xl font-bold"><FontAwesomeIcon icon={faWrench} /></div>
               <div>
                 <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Workflows</h3>
-                <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">Git & GitHub, Agile/Scrum processes, AWS basics, Figma layouts</p>
+                <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">Git & GitHub, CI/CD, Agile/Scrum Methodologies, AWS Basics, Figma UI Design</p>
               </div>
             </div>
           </div>
@@ -594,7 +597,7 @@ export default function App() {
           <div className="glass-panel bg-white dark:bg-slate-900 p-8 rounded-2xl max-w-sm w-full text-center border border-rose-500/20 shadow-2xl">
             <div className="text-rose-500 text-3xl mb-4"><FontAwesomeIcon icon={faCircleExclamation} /></div>
             <h3 className="text-xl font-bold text-slate-900 dark:text-white">Sending Failed</h3>
-            <p className="text-slate-500 dark:text-slate-400 text-sm mt-2">Could not send email. Please check your SMTP app password settings.</p>
+            <p className="text-slate-500 dark:text-slate-400 text-sm mt-2">Could not send email. Please check your Resend API Key configuration in the backend settings.</p>
             <button onClick={() => setFormStatus('idle')} className="bg-rose-600 hover:bg-rose-700 text-white px-6 py-2 rounded-lg mt-6 font-semibold transition-colors">Close</button>
           </div>
         </div>
